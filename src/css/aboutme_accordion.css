@@ -1,0 +1,73 @@
+.accordion {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* .accordion_content {
+  display: none;
+} */
+
+.accordion_title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+  cursor: pointer;
+}
+
+.accordion_title span {
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  padding: 9px;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  transform: rotate(0);
+  transition: transform 0.5s ease-out;
+}
+
+.accordion_content {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+
+  padding-top: 8px;
+  padding-bottom: 32px;
+
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out,
+    opasity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
+}
+
+.accordion_content.active {
+  visibility: visible;
+  opacity: 1;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out,
+    opasity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
+}
+
+.accordion_content ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 32px;
+}
+
+.icons {
+  fill: #d9d9d9;
+}
