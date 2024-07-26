@@ -1,10 +1,10 @@
 
-  .swiper-container {
+  /* .swiper-container {
     overflow: hidden;
     position: relative;
     width: 100%;
     height: 100%;
-  }
+  } */
 
   
 .projects-title{
@@ -17,15 +17,18 @@ color: rgba(250, 250, 250, 0.4);
 margin-bottom:  32px;
  }
   
-  .swiper-wrapper {
+  .list-wrapper {
     display: flex;
+    gap: 40px;
+    flex-direction: row;
     transition: transform 0.3s ease-in-out;
+    
   }
   
  
   .swiper-slide {
-    min-width: 320px;
-    max-width: 375px;
+    min-width: 344px;
+    max-width: 344px;
     width: 100%;
     flex-shrink: 0;
    
@@ -33,7 +36,7 @@ margin-bottom:  32px;
 
 .project-slide{
     border-radius: 0 0 24px 24px;
-    padding: 100px 32px 100px 32px;
+    padding: 100px 0 100px 32px;
     background-color:  #242527;;
 }
 
@@ -106,35 +109,7 @@ margin-bottom:  32px;
   
   }
   
-  .project-image-one {
-    background-image: url('../img/expand.x1.desktop.jpg'); 
-  }
-  
-  @media screen and (min-resolution: 192dpi){
-    .project-image-one{
-        background-image: url(../img/expand.x2.desktop.jpg);
-    }
-}
-
-  .project-image-two {
-    background-image: url('../img/pets.x1.desktop.jpg');
-  }
-
-  @media screen and (min-resolution: 192dpi){
-    .project-image-two{
-        background-image: url(../img/pets.x2.desktop.jpg);
-    }
-}
-  
-  .project-image-three {
-    background-image: url('../img/register.x1.desktop.jpg');
-  }
  
-  @media screen and  (min-resolution: 192dpi){
-    .project-image-three{
-        background-image: url(../img/register.x2desktop.jpg);
-    }
-}
 
   .swiper-buttons {
     display: flex;
@@ -144,16 +119,21 @@ margin-bottom:  32px;
   
 
   .swiper-button-next, .swiper-button-prev {
-    background-color: rgba(0, 0, 0, 0.5);
-    color: #fff;
-    width: 30px;
-    height: 30px;
+    border: 1px solid rgba(250, 250, 250, 0.5);
+    border-radius: 60px;
+    padding: 14px;
+    width: 52px;
+    height: 52px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 50%;
     cursor: pointer;
     margin: 0 4px;
+  }
+ 
+  .swiper-button-disabled {
+    background-color: rgba(0, 0, 0, 0.2);
+    cursor: not-allowed;
   }
   
  
@@ -173,7 +153,7 @@ margin-bottom:  32px;
 }
 
 .project-slide{
-  padding: 125px 45px 125px 45px;
+  padding: 125px 20px 125px 45px;
 }
 
 .content{
@@ -199,6 +179,12 @@ padding: 18px 50px;
   height: 385px;
 }
 
+.swiper-button-next, .swiper-button-prev{
+padding: 18px;
+width: 68px;
+height: 68px;
+}
+
 }
  
 @media screen and (min-width: 1440px){
@@ -216,7 +202,7 @@ padding: 18px 50px;
   .project-slide{
     min-width: 688px;
     max-width: 688px;
-    padding: 120px 37px;
+    padding: 120px 0 120px 37px;
     border-radius: 0 24px  24px 0 ;
   }
 
