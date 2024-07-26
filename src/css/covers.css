@@ -2,8 +2,8 @@
  /* Covers */
 
  .covers{
-    padding-top: 64px;
-    padding-bottom: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
     position: relative;
  }
 
@@ -69,8 +69,8 @@ background-size: cover;
 
 @media screen and (min-width: 768px) {
  .covers{
-    padding-top: 96px;
-    padding-bottom: 96px;
+    padding-top: 48px;
+    padding-bottom: 48px;
  } 
  
  .covers-container {
@@ -102,8 +102,8 @@ background-size: cover;
 
 @media screen and (min-width: 1440px) {
 .covers {
-    padding-top: 164px;
-    padding-bottom: 164px;
+    padding-top: 82px;
+    padding-bottom: 82px;
     }
 
  .covers-container {
