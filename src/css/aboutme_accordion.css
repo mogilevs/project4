@@ -81,8 +81,45 @@
   padding-top: 0;
 }
 
+.acc-2 ul,
+.acc-3 ul {
+  gap: 10px;
+}
+
 @media screen and (min-width: 768px) {
+  .accordion_content.active {
+    margin-top: 8px;
+    margin-bottom: 32px;
+  }
+
+  .accordion_content ul {
+    gap: 16px;
+  }
+
+  .accordion_title {
+    padding-top: 32px;
+  }
+
+  .acc-1 {
+    padding-top: 0;
+  }
 }
 
 @media screen and (min-width: 1440px) {
+  .accordion_content.active {
+  }
+  .accordion_content ul {
+    gap: 32px;
+    margin-right: 68px;
+    margin-left: 696px;
+  }
+
+  .acc-3 ul {
+    margin-right: 215px;
+  }
+
+  .acc-3 ul li:first-child {
+    padding-right: 96px;
+  }
+  :first-child ;
 }
