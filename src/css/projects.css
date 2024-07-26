@@ -130,6 +130,16 @@ margin-bottom:  32px;
     cursor: pointer;
     margin: 0 4px;
   }
+
+  .turn-right{
+    fill: #242527;
+    stroke: #f2f2f2;
+  }
+
+  .turn-left{
+    fill: #242527;
+    stroke: #f2f2f2;
+  }
  
   .swiper-button-disabled {
     background-color: rgba(0, 0, 0, 0.2);
