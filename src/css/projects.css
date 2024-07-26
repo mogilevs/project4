@@ -33,7 +33,7 @@ margin-bottom:  32px;
 
 .project-slide{
     border-radius: 0 0 24px 24px;
-    padding: 100px 0 100px 32px;
+    padding: 100px 32px 100px 32px;
     background-color:  #242527;;
 }
 
@@ -75,6 +75,7 @@ margin-bottom:  32px;
     color: #1c1d20;
     margin-bottom: 32px;
     line-height: 117%;
+   max-width: 494px;
 
   }
   
@@ -109,7 +110,7 @@ margin-bottom:  32px;
     background-image: url('../img/expand.x1.desktop.jpg'); 
   }
   
-  @media (min-resolution: 192dpi){
+  @media screen and (min-resolution: 192dpi){
     .project-image-one{
         background-image: url(../img/expand.x2.desktop.jpg);
     }
@@ -119,7 +120,7 @@ margin-bottom:  32px;
     background-image: url('../img/pets.x1.desktop.jpg');
   }
 
-  @media (min-resolution: 192dpi){
+  @media screen and (min-resolution: 192dpi){
     .project-image-two{
         background-image: url(../img/pets.x2.desktop.jpg);
     }
@@ -129,7 +130,7 @@ margin-bottom:  32px;
     background-image: url('../img/register.x1.desktop.jpg');
   }
  
-  @media (min-resolution: 192dpi){
+  @media screen and  (min-resolution: 192dpi){
     .project-image-three{
         background-image: url(../img/register.x2desktop.jpg);
     }
@@ -156,9 +157,10 @@ margin-bottom:  32px;
   }
   
  
-  @media (min-width: 768px) {
+  @media screen and (min-width: 768px)  {
 .swiper-slide{
-    min-width: 704px;
+   
+    min-width:  704px;
     max-width: 704px;
 }
 
@@ -166,11 +168,68 @@ margin-bottom:  32px;
     margin-bottom: 164px;
 }
 
+.project-card{
+  padding: 64px;
 }
-  
-  @media (min-width: 1024px) {
 
+.project-slide{
+  padding: 125px 45px 125px 45px;
+}
+
+.content{
+  padding: 18px;
+}
+
+.programming{
+font-size: 44px;
+line-height: 100%;
+width: 100%;
+
+
+}
+
+.see-projects-desk{
+padding: 18px 50px;
+
+}
+
+.project-image-one,
+.project-image-two,
+.project-image-three{
+  height: 385px;
+}
+
+}
+ 
+@media screen and (min-width: 1440px){
+.projects-title{
+  line-height: 150%;
+}
+
+  .swiper-slide{
+    min-width: 1376px;
+    max-width: 1376px;
+    display: flex;
+    flex-direction: row;
   }
+  
+  .project-slide{
+    min-width: 688px;
+    max-width: 688px;
+    padding: 120px 37px;
+    border-radius: 0 24px  24px 0 ;
+  }
+
+  .project-card{
+    min-width: 688px;
+    max-width: 688px;
+    border-radius:24px 0 0 24px  ;
+  }
+
+  .content-list{
+    margin-bottom: 223px;
+}
+}
   
 
 
