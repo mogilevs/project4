@@ -65,6 +65,7 @@
     margin-bottom: 16px;
     display: inline-block;
     max-width: 265px;
+    letter-spacing: -0.02em;
 }
 
 .faq-show-text-button {
@@ -140,7 +141,8 @@
     }
 
     .faq-hide-text {
-        padding-bottom: 32px;
+        padding-bottom: 24px;
+        max-width: 656px;
     }
 }
 
@@ -168,6 +170,10 @@
     .accordion-container-faq .ac {
         border: none;
     }
+
+ .faq-hide-text {
+     padding-bottom: 26px;
+ }
 
     .faq-list-item:nth-child(odd)::after {
         content: '';
