@@ -1,3 +1,8 @@
+import Accordion from 'accordion-js';
+import 'accordion-js/dist/accordion.min.css';
+
+new Accordion('.accordion-container');
+
 const titles = document.querySelectorAll('.accordion_title');
 const contents = document.querySelectorAll('.accordion_content');
 
