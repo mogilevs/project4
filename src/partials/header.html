@@ -1,13 +1,87 @@
-<header class="header">
-  <nav class="nav">
-    <ul class="nav-list">
-      <li class="nav-item">
-        <a href="./page-2.html" class="nav-link">Page 2</a>
-      </li>
+<header class="header" id="header-id">
+<section class="container header-section">
+<nav class="logo-link">
+  <a href="./index.html">
+   <div class="home-link">
+      <picture>
+        <source
+        srcset="
+        ../img/jefferson-photo-2x-min.jpg 2x,
+        ../img/jefferson-photo-min.jpg 1x
+        "/>
+        <img src="../img/jefferson-photo-min.jpg" alt="me" class="jeff-photo">
+      </picture>
+     
+      <p class="logo-link-text">
+        jefferson*
+      </p>
+      </svg>
+   </div>
+  </a>
+</nav>
+<button type="button" class="mob-menu-open-btn">
+  <svg class="mob-menu-open-btn-icon" width="21" height="9">
+    <use href="../img/icons.svg#icon-burger"></use>
+    </svg>
+</button>
+<div class="drop-menu">
+  <button type="button" class="header-menu">Menu</button>
+  <nav class="drop-menu-nav">
+      <ul class="drop-menu-list">
+        <li class="drop-menu-item">
+          <a href="#aboutme-id" class="drop-menu-link">About me</a>
+        </li>
+        <li class="drop-menu-item">
+          <a href="#benefits-id" class="drop-menu-link">
+            Benefits
+          </a>
+        </li>
+        <li class="drop-menu-item">
+          <a href="#projects-id" class="drop-menu-link">
+            Projects
+          </a>
+        </li>
+        <li class="drop-menu-item">
+          <a href="#faq-section-id" class="drop-menu-link">
+            FAQ
+          </a>
+        </li>
+      </ul>
+    </nav>
+</div>
+<button type="button" class="order-btn">Order the project</button>
 
-      <li class="nav-item">
-        <a href="./page-3.html" class="nav-link">Page 3</a>
-      </li>
-    </ul>
-  </nav>
+
+</section>
+<div class="mob-menu">
+  <button type="button" class="mob-menu-close-btn">
+    <svg class="mob-menu-close-btn-icon" width="14" height="14">
+    <use href="../img/icons.svg#icon-close-mob-menu"></use>
+    </svg>
+    </button>
+    <nav class="mob-menu-nav">
+      <ul class="mob-menu-list">
+        <li class="mob-menu-item">
+          <a href="#aboutme-id" class="mob-menu-link">About me</a>
+        </li>
+        <li class="mob-menu-item">
+          <a href="#benefits-id" class="mob-menu-link">
+            Benefits
+          </a>
+        </li>
+        <li class="mob-menu-item">
+          <a href="#projects-id" class="mob-menu-link">
+            Projects
+          </a>
+        </li>
+        <li class="mob-menu-item">
+          <a href="#faq-section-id" class="mob-menu-link">
+            FAQ
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <button type="button" class="mob-order-btn">Order the project</button>
+</div>
 </header>
+<script src="../js/header.js"></script>
