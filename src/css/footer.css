@@ -3,6 +3,8 @@
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
 
 }
 
@@ -16,9 +18,9 @@
     }
 }
 
-.footer-container {
-    padding-top: 32px;
-    padding-bottom: 32px;
+
+.footer-box{
+   margin-bottom: 63px;
 }
 
 .footer-top {
@@ -37,12 +39,10 @@
     margin-right: 8px;
     margin-top: 10px;
     margin-bottom: 10px;
-    /* max-width: 100%;
-    height: auto; */
+    
 }
 
 .footer-text {
-   
     font-weight: 500;
     font-size: 40px;
     line-height: 1;
@@ -56,6 +56,7 @@
     color: #ed3b44;
 }
 
+
 .footer-text-bottom {
     font-weight: 500;
     font-size: 40px;
@@ -64,10 +65,10 @@
     text-transform: uppercase;
     color: #fafafa;
     margin-top: 0;
-    margin-bottom: 63px;
+    
 }
 
-.footer-form {}
+
 
 .footer-input-container {
     display: flex;
@@ -120,10 +121,7 @@
     font-style: normal;
 }
 
-.footer-contacts-item {
-  
-   
-}
+
 
 .link-info {
     font-weight: 500;
@@ -206,6 +204,11 @@ border: 1px solid #fafafa;
     background-color: transparent;
 }
 
+.modal-icon{
+    fill: #1c1d20;
+    stroke: #fafafa;
+}
+
 .titel-modal{
     font-weight: 600;
     font-size: 20px;
@@ -225,7 +228,10 @@ border: 1px solid #fafafa;
     color: rgba(250, 250, 250, 0.6);
 }
 
-
+  .modal-icon {
+      width: 22px;
+      height: 22px;
+  }
 
 /*================================================*/
 
@@ -259,6 +265,10 @@ border: 1px solid #fafafa;
 
     }
 
+    .footer-box{
+    margin-bottom: 18px;
+    }
+
     .footer-text-bottom{
         font-size: 64px;
         margin-bottom: 18px;
@@ -282,6 +292,7 @@ border: 1px solid #fafafa;
         display: flex;
        align-items: center;
         gap: 32px; 
+        margin-bottom: 18px;
     }
 
     .footer-input{
@@ -293,11 +304,11 @@ border: 1px solid #fafafa;
         width: 150px;
         height: 150px;
         margin-bottom: 0;
-        margin-top: 18px;
+        margin-top: 0;
+        
     }
 
     .footer-contacts{
-        margin-top: 18px;
         gap: 8px;
     }
 
@@ -306,10 +317,17 @@ border: 1px solid #fafafa;
         padding: 18px 32px;
     }
 
+
+
     .modal{
         padding: 64px;
-            width: 492px;
-            height: 246px
+        width: 492px;
+        height: 246px
+    }
+
+    .modal-icon{
+        width: 24px;
+        height: 24px;
     }
 
     
