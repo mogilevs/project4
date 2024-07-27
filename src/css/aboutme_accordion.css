@@ -1,3 +1,7 @@
+.aboutme-accordion-section {
+  margin-bottom: 32px;
+}
+
 .accordion {
   display: flex;
   flex-direction: column;
@@ -87,6 +91,10 @@
 }
 
 @media screen and (min-width: 768px) {
+  .aboutme-accordion-section {
+    margin-bottom: 64px;
+  }
+
   .accordion_content.active {
     margin-top: 8px;
     margin-bottom: 32px;
@@ -103,11 +111,19 @@
   .acc-1 {
     padding-top: 0;
   }
+
+  .accordion_title span {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
 }
 
 @media screen and (min-width: 1440px) {
-  .accordion_content.active {
+  .aboutme-accordion-section {
+    margin-bottom: 96px;
   }
+
   .accordion_content ul {
     gap: 32px;
     margin-right: 68px;
@@ -121,5 +137,4 @@
   .acc-3 ul li:first-child {
     padding-right: 96px;
   }
-  :first-child ;
 }
