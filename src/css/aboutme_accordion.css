@@ -1,5 +1,6 @@
 .aboutme-accordion-section {
-  margin-bottom: 32px;
+  padding-top: 16px;
+  padding-bottom: 16px;
 }
 
 .accordion {
@@ -94,7 +95,8 @@
 
 @media screen and (min-width: 768px) {
   .aboutme-accordion-section {
-    margin-bottom: 64px;
+    padding-top: 32px;
+    padding-bottom: 32px;
   }
 
   .accordion_content.active {
@@ -128,7 +130,8 @@
 
 @media screen and (min-width: 1440px) {
   .aboutme-accordion-section {
-    margin-bottom: 96px;
+    padding-top: 48px;
+    padding-bottom: 48px;
   }
 
   .accordion_content ul {
