@@ -27,14 +27,6 @@ prevButton.addEventListener('click', movePrev);
 document.addEventListener('keydown', keyMove);
 
 
-document.addEventListener('wheel', (evt) => {
-  if (evt.deltaY > 0) {
-    moveNext();
-  } else if (evt.deltaY < 0) {
-    movePrev();
-  }
-});
-
 
 function keyMove(evt) {
   if (evt.code === 'ArrowRight') {
