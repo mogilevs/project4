@@ -50,7 +50,11 @@ background-size: cover;
     align-items: center;
     justify-content: center;
     white-space: nowrap;
-    animation-name: marqueeLine;
+    
+}
+
+.covers.animate .covers-item{
+animation-name: marqueeLine;
     animation-duration: 10s;
     animation-timing-function: ease-in-out;
     animation-iteration-count: infinite;
