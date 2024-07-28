@@ -1,6 +1,6 @@
 .review-section {
-  padding-top: 64px;
-  padding-bottom: 64px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 
 .review-section h2 {
@@ -217,6 +217,11 @@
 }
 
 @media screen and (min-width: 768px) {
+  .review-section {
+    padding-top: 48px;
+    padding-bottom: 48px;
+  }
+
   .swiper-card {
     max-width: 344px;
   }
@@ -241,5 +246,10 @@
 @media screen and (min-width: 1440px) {
   .swiper-card {
     max-width: 332px;
+  }
+
+  .review-section {
+    padding-top: 96px;
+    padding-bottom: 96px;
   }
 }
