@@ -1,10 +1,14 @@
+.projects-section{
+  margin-bottom: 82px;
+}
 
-  /* .swiper-container {
+
+  .swiper-container {
     overflow: hidden;
     position: relative;
     width: 100%;
     height: 100%;
-  } */
+  }
 
   
 .projects-title{
@@ -142,8 +146,10 @@ margin-bottom:  32px;
   }
  
   .swiper-button-disabled {
-    background-color: rgba(0, 0, 0, 0.2);
-    cursor: not-allowed;
+    border: 1px solid rgba(250, 250, 250, 0.2);
+    fill:#242527;
+    stroke:rgba(250, 250, 250, 0.2) ;
+    /* cursor: not-allowed; */
   }
   
  
@@ -224,6 +230,11 @@ height: 68px;
 
   .content-list{
     margin-bottom: 223px;
+}
+
+.turn-left, .turn-right{
+  width: 32px;
+  height: 32px;
 }
 }
   
