@@ -1,36 +1,30 @@
 <footer class="footer-section" id="work-together">
   <div class="footer-container container">
-    <div class="footer-box">
-      <div class="footer-top">
-        <picture>
-          <source
-            srcset="
-              ./img/footer/image-mob-1x-min.jpg 1x,
-              ./img/footer/image-mob-2x-min.jpg 2x
-            "
-            media="(max-width: 767px)"
-          />
-          <source
-            srcset="
-              ./img/footer/image-tab-1x-min.jpg 1x,
-              ./img/footer/image-tab-2x-min.jpg 2x
-            "
-            media="(min-width: 768px)"
-          />
-          <img
-            class="footer-img"
-            src="./img/footer/image-mob-1x-min.jpg"
-            alt="Profile"
-          />
-        </picture>
-        <h2 class="footer-text">
-          Let&prime;s&nbsp;<span class="footer-text-span">work</span>
-          <!-- <br class="together">together</br> -->
-        </h2>
-      </div>
-      <div><h2 class="footer-text-bottom">together</h2></div>
-    </div>
-    <form class="footer-form">
+    <h2 class="footer-text">
+      <picture>
+        <source
+          srcset="
+            ./img/footer/image-mob-1x-min.jpg 1x,
+            ./img/footer/image-mob-2x-min.jpg 2x
+          "
+          media="(max-width: 767px)"
+        />
+        <source
+          srcset="
+            ./img/footer/image-tab-1x-min.jpg 1x,
+            ./img/footer/image-tab-2x-min.jpg 2x
+          "
+          media="(min-width: 768px)"
+        />
+        <img
+          class="footer-img"
+          src="./img/footer/image-mob-1x-min.jpg"
+          alt="Profile"
+        /> </picture
+      >Let&prime;s&nbsp;<span class="footer-text-span">work</span
+      ><span class="footer-text-bottom">together</span>
+    </h2>
+    <form class="footer-form js-submit-form">
       <div class="footer-input-container">
         <input
           class="footer-input"
@@ -38,7 +32,14 @@
           type="email"
           name="email"
           placeholder="clients@gmail.com"
+          pattern="^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$"
         />
+        <span class="message success" id="successMessage">Success!</span>
+        <span class="message error" id="errorMessage"
+          >Invalid email, try again</span
+        >
+      </div>
+      <div class="footer-input-container">
         <input
           id="comments"
           class="footer-input"
