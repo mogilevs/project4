@@ -46,7 +46,7 @@
   transition: transform 0.5s ease-out;
 }
 
-.down-icons.active {
+.active .down-icons {
   transform: rotate(180deg);
 }
 
@@ -98,6 +98,16 @@
   stroke: #d9d9d9;
   width: 18px;
   height: 18px;
+}
+
+.down-icons:hover {
+  border-color: white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.icons:hover {
+  stroke: white;
+  filter: drop-shadow(0 0 8px white);
 }
 
 @media screen and (min-width: 768px) {
