@@ -1,5 +1,5 @@
-const titles = document.querySelectorAll('.accordion_title');
-const contents = document.querySelectorAll('.accordion_content');
+const titles = document.querySelectorAll('.accordion-title');
+const contents = document.querySelectorAll('.accordion-content');
 
 titles.forEach(item =>
   item.addEventListener('click', () => {
