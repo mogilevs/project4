@@ -33,7 +33,7 @@
 .swiper-wrap {
   width: 344px;
   width: 100%;
-  flex-shrink: 0;
+  /* flex-shrink: 0; */
 
 }
 
@@ -200,7 +200,7 @@
     padding-bottom: 48px;
   }
 
-  .swiper-wrap {
+  .swiper-wrap{
 
     min-width: 704px;
     max-width: 704px;
