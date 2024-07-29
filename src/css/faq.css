@@ -8,7 +8,8 @@
 }
 
 .faq-section {
-    margin-bottom: 64px;
+padding-top: 32px;
+padding-bottom: 32px;
 }
 
 .faq-title {
@@ -87,9 +88,11 @@
     transform: rotate(180deg);
 }
 
-.faq-show-text-button:hover:focus {
-    border: 1px solid rgba(250, 250, 250, 0.5);
+.faq-show-text-button:hover {
+    border-color: #fafafa;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
+
 
 .faq-icon {
     stroke: #fafafa;
@@ -118,7 +121,8 @@
 
 @media screen and (min-width: 768px) {
     .faq-section {
-        margin-bottom: 96px;
+        padding-top: 48px;
+            padding-bottom: 48px;
     }
 
     .faq-list-item {
@@ -150,7 +154,8 @@
 
 @media screen and (min-width: 1440px) {
     .faq-section {
-        margin-bottom: 164px;
+    padding-top: 82px;
+        padding-bottom: 82px;
     }
 
     .faq-list {

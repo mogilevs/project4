@@ -7,6 +7,12 @@
     <symbol id="icon-menu" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.286" d="M4 11.333h24M4 20.667h24"/>
     </symbol>
+    <symbol id="icon-scroll-arrow-weigth" viewBox="0 0 32 32">
+      <path d="M16 6a1.99 1.99 0 0 1 1.413.587l6.667 6.667a2 2 0 0 1-2.828 2.825l.001.001L16 10.829l-5.253 5.253a2 2 0 0 1-2.826-2.83l6.666-6.666A1.996 1.996 0 0 1 16 5.999zm0 8a1.995 1.995 0 0 1 1.413.587l6.667 6.667a2 2 0 0 1-2.828 2.825l.001.001L16 18.829l-5.253 5.253a2 2 0 0 1-2.826-2.83l6.666-6.666A1.996 1.996 0 0 1 16 13.999z"/>
+    </symbol>
+    <symbol id="icon-scroll-arrow" viewBox="0 0 32 32">
+      <path d="M16 6.667c.368 0 .701.149.943.391l6.667 6.667a1.333 1.333 0 0 1-1.886 1.884L16 9.885l-5.724 5.724a1.333 1.333 0 0 1-1.884-1.886l6.666-6.666c.241-.241.575-.391.943-.391zm0 8c.368 0 .701.149.943.391l6.667 6.667a1.333 1.333 0 0 1-1.886 1.884L16 17.885l-5.724 5.724a1.333 1.333 0 0 1-1.884-1.886l6.666-6.666c.241-.241.575-.391.943-.391z"/>
+    </symbol>
     <symbol id="icon-close" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.667" d="M24 8 8 24M8 8l16 16"/>
     </symbol>
@@ -39,5 +45,11 @@
     <symbol id="icon-arrow-right" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.333 16h21.333M18.667 8l8 8-8 8"/>
     </symbol>
+    <symbol id="icon-burger" viewBox="0 0 64 32">
+<path fill="none" stroke="#fafafa" style="stroke: var(--color1, #fafafa)" stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="5.3333" d="M4 5.111h56M4 26.889h56"></path>
+</symbol>
+<symbol id="icon-close-mob-menu" viewBox="0 0 32 32">
+<path d="M32 3.223l-3.223-3.223-12.777 12.777-12.777-12.777-3.223 3.223 12.777 12.777-12.777 12.777 3.223 3.223 12.777-12.777 12.777 12.777 3.223-3.223-12.777-12.777 12.777-12.777z"></path>
+</symbol>
   </defs>
 </svg>

@@ -1,0 +1,170 @@
+.aboutme-accordion-section {
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-bottom: 1px solid rgba(250, 250, 250, 0.2);
+}
+
+.accordion-title {
+  display: flex;
+  justify-content: space-between;
+
+  cursor: pointer;
+
+  padding-bottom: 32px;
+}
+
+.accordion-title h3 {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  color: rgba(250, 250, 250, 0.4);
+}
+
+.acc-2,
+.acc-3 {
+  padding-top: 20px;
+}
+
+.down-icons {
+  display: inline-block;
+  position: relative;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  padding: 9px;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  transform: rotate(0);
+  transition: transform 0.5s ease-out;
+}
+
+.active .down-icons {
+  transform: rotate(180deg);
+}
+
+.accordion-title.active {
+  padding-bottom: 12px;
+}
+
+.accordion-content {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+  flex: 1;
+  max-height: 0;
+  opacity: 0;
+  visibility: hidden;
+
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out,
+    opacity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
+}
+
+.accordion-content.active {
+  visibility: visible;
+  opacity: 1;
+  transition: max-height 0.5s ease-out, padding 0.5s ease-out,
+    opacity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
+}
+
+.accordion-content ul {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-direction: column;
+  padding-bottom: 20px;
+}
+
+.content-first {
+  gap: 32px;
+}
+
+.content-second,
+.content-next {
+  gap: 10px;
+}
+
+.icons {
+  fill: transparent;
+  stroke: #d9d9d9;
+  width: 18px;
+  height: 18px;
+}
+
+.down-icons:hover {
+  border-color: white;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.icons:hover {
+  stroke: white;
+  filter: drop-shadow(0 0 8px white);
+}
+
+@media screen and (min-width: 768px) {
+  .aboutme-accordion-section {
+    margin-top: 64px;
+    margin-bottom: 64px;
+  }
+
+  .accordion-content ul {
+    padding-bottom: 32px;
+  }
+
+  .accordion-title.active {
+    padding-bottom: 8px;
+  }
+
+  .content-first {
+    gap: 16px;
+  }
+
+  .acc-2,
+  .acc-3 {
+    padding-top: 32px;
+  }
+
+  .down-icons {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .icons {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .aboutme-accordion-section {
+    margin-top: 96px;
+    margin-bottom: 96px;
+  }
+
+  .accordion-content ul {
+    margin-right: 68px;
+    margin-left: 696px;
+  }
+
+  .content-first {
+    gap: 32px;
+  }
+
+  .content-next {
+    width: 465px;
+  }
+
+  .content-next li:first-child {
+    padding-right: 96px;
+  }
+}
