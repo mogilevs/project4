@@ -12,7 +12,8 @@ const form = {
   modalCloseBtn: document.querySelector('.modal-close-btn'),
 };
 
-const emailPattern = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+const EMAIL_PATTERN = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+const API_URL = 'https://portfolio-js.b.goit.study/api/requests/';
 
 // обмеження розміру comments
 form.commentsElem.addEventListener('blur', function () {
@@ -34,7 +35,7 @@ form.emailElem.addEventListener('input', function () {
     return;
   }
 
-  if (emailPattern.test(email)) {
+  if (EMAIL_PATTERN.test(email)) {
     form.emailElem.classList.add('success');
     form.emailElem.classList.remove('error');
     form.successMessage.style.display = 'block';
@@ -97,7 +98,7 @@ form.formElem.addEventListener('submit', async function (event) {
   const emailValue = form.emailElem.value.trim();
   const textComment = form.commentsElem.value;
 
-  if (!emailPattern.test(emailValue)) {
+  if (!EMAIL_PATTERN.test(emailValue)) {
     iziToast.error({
       title: 'Error:',
       message: 'Invalid email address',
@@ -106,13 +107,10 @@ form.formElem.addEventListener('submit', async function (event) {
   }
 
   try {
-    const response = await axios.post(
-      'https://portfolio-js.b.goit.study/api/requests/',
-      {
-        email: emailValue,
-        comment: textComment,
-      }
-    );
+    const response = await axios.post(API_URL, {
+      email: emailValue,
+      comment: textComment,
+    });
 
     if (response.status === 201) {
       openModal();
