@@ -5,3 +5,4 @@ import './js/projects.js';
 import './js/covers';
 import './js/aboutme_accordion.js';
 import './js/scroll-up.js';
+import './js/footer.js';
