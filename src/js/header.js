@@ -4,6 +4,8 @@ const mobMenuClose = document.querySelector('.mob-menu-close-btn');
 const dropMenu = document.querySelector('.drop-menu-nav');
 const dropMenuBtn = document.querySelector('.header-menu');
 const mobMenuLink = document.querySelector('.mob-menu-nav');
+const orderLink = document.querySelector('.order-btn');
+const orderLinkMob = document.querySelector('.mob-order-btn');
 
 mobMenuOpen.addEventListener('click', openMobMenu);
 mobMenuClose.addEventListener('click', closeMobMenu);
@@ -11,7 +13,8 @@ dropMenuBtn.addEventListener('click', openDropMenu);
 dropMenu.addEventListener('click', handlerScroll);
 mobMenuLink.addEventListener('click', handlerScroll);
 window.addEventListener('keydown', closeDropMenuECS);
-
+orderLink.addEventListener('click', handlerScroll);
+orderLinkMob.addEventListener('click', handlerScroll);
 
 function openMobMenu() {
   mobMenu.classList.add('is-open');
@@ -49,7 +52,7 @@ function handlerScroll(evt) {
   if (mobMenu.classList.contains('is-open')) {
     mobMenu.classList.remove('is-open');
   }
-    const target = evt.target.getAttribute('href').substring(1);
+  const target = evt.target.getAttribute('href').substring(1);
     const targetSection = document.getElementById(target);
     
 
@@ -58,3 +61,19 @@ function handlerScroll(evt) {
     behavior: 'smooth',
   });
 }
+
+export {
+  mobMenuOpen,
+  mobMenu,
+  mobMenuClose,
+  dropMenu,
+  dropMenuBtn,
+  mobMenuLink,
+  orderLink,
+  orderLinkMob,
+  openMobMenu,
+  closeMobMenu,
+  openDropMenu,
+  closeDropMenuECS,
+  handlerScroll,
+};
