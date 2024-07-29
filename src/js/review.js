@@ -88,14 +88,25 @@ async function fetchAndDisplayReviews() {
 }
 
 const swiperReview = new Swiper('.swiper', {
-    initialSlide: 0,
-    speed: 650,
-    spaceBetween: 16,
-    preventClicks: true,
-    freeMode: false,
-    navigation: {
-        nextEl: '.button-next',
-        prevEl: '.button-prev',
+  initialSlide: 0,
+  speed: 650,
+  spaceBetween: 16,
+  preventClicks: true,
+  freeMode: false,
+  navigation: {
+    nextEl: '.button-next',
+    prevEl: '.button-prev',
+  },
+  mousewheel: {
+    invert: true,
+  },
+  keyboard: {
+    enabled: true,
+    onlyInViewport: false,
+  },
+  breakpoints: {
+    375: {
+      slidesPerView: 1,
     },
     768: {
       slidesPerView: 2,
@@ -110,26 +121,26 @@ const swiperReview = new Swiper('.swiper', {
 });
 
 function updateButtonStates() {
-    buttonNext.disabled = swiperReview.isEnd;
-    buttonPrev.disabled = swiperReview.isBeginning;
+  buttonNext.disabled = swiperReview.isEnd;
+  buttonPrev.disabled = swiperReview.isBeginning;
 }
 
 function showErrorMessage() {
-    reviewsList.innerHTML = '<div class="err-container"></div>';
-    const errorAnimationContainer = document.querySelector('.err-container');
-       lottie.loadAnimation({
-        container: errorAnimationContainer,
-        renderer: 'svg',
-        loop: true,
-        autoplay: true,
-        path: './img/redcat.json'  
-    });
-    buttonNext.disabled = true;
-    buttonPrev.disabled = true;
+  reviewsList.innerHTML = '<div class="err-container"></div>';
+  const errorAnimationContainer = document.querySelector('.err-container');
+  lottie.loadAnimation({
+    container: errorAnimationContainer,
+    renderer: 'svg',
+    loop: true,
+    autoplay: true,
+    path: './img/redcat.json',
+  });
+  buttonNext.disabled = true;
+  buttonPrev.disabled = true;
 }
 
-buttonNext.addEventListener('click', goToNextSlide); 
-buttonPrev.addEventListener('click', goToPrevSlide); 
+buttonNext.addEventListener('click', goToNextSlide);
+buttonPrev.addEventListener('click', goToPrevSlide);
 document.addEventListener('keydown', handleKeyNavigation);
 
 function handleKeyNavigation(evt) {
@@ -142,23 +153,22 @@ function handleKeyNavigation(evt) {
 }
 
 function goToNextSlide() {
-    swiperReview.slideNext();
-    updateButtonStates();
+  swiperReview.slideNext();
+  updateButtonStates();
 }
 function goToPrevSlide() {
-    swiperReview.slidePrev();
-    updateButtonStates();
+  swiperReview.slidePrev();
+  updateButtonStates();
 }
 
-const slides = document.querySelectorAll('.swiper-slide'); 
-if (swiperReview.activeIndex === slides.length - 1) { 
-    buttonNext.addEventListener('click', moveNext); 
-buttonNext.disabled = true;
-  } 
+const slides = document.querySelectorAll('.swiper-slide');
+if (swiperReview.activeIndex === slides.length - 1) {
+  buttonNext.addEventListener('click', moveNext);
+  buttonNext.disabled = true;
+}
 
-
-if (swiperReview.activeIndex === 0) { 
-    buttonPrev.disabled = true;
+if (swiperReview.activeIndex === 0) {
+  buttonPrev.disabled = true;
 }
 
 function showError() {
