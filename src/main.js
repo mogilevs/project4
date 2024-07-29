@@ -1,3 +1,3 @@
 
-import '/js/review.js';
+import './js/review.js';
 import './js/faq';
