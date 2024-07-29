@@ -60,20 +60,20 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   color: #fafafa;
-
+  flex: 1;
   max-height: 0;
   opacity: 0;
   visibility: hidden;
 
   transition: max-height 0.5s ease-out, padding 0.5s ease-out,
-    opasity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
+    opacity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
 }
 
 .accordion-content.active {
   visibility: visible;
   opacity: 1;
   transition: max-height 0.5s ease-out, padding 0.5s ease-out,
-    opasity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
+    opacity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
 }
 
 .accordion-content ul {
