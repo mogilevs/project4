@@ -2,8 +2,8 @@ import Accordion from 'accordion-js';
 
 new Accordion('.accordion-container');
 
-const titles = document.querySelectorAll('.ac-header');
-const contents = document.querySelectorAll('.ac-panel');
+const titles = document.querySelectorAll('.accordion-title');
+const contents = document.querySelectorAll('.accordion-content');
 
 titles.forEach(item =>
   item.addEventListener('click', () => {
