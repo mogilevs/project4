@@ -134,7 +134,7 @@ function showErrorMessage() {
         renderer: 'svg',
         loop: true,
         autoplay: true,
-        path: '../img/redcat.json'  
+        path: './img/redcat.json'  
     });
     buttonNext.disabled = true;
     buttonPrev.disabled = true;
