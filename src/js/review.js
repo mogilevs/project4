@@ -87,7 +87,7 @@ async function fetchAndDisplayReviews() {
   }
 }
 
-const swiper2 = new Swiper('.swiper', {
+const swiper = new Swiper('.swiper', {
   initialSlide: 0,
   speed: 650,
   spaceBetween: 16,
@@ -121,8 +121,8 @@ const swiper2 = new Swiper('.swiper', {
 });
 
 function updateButtonStates() {
-  buttonNext.disabled = swiper2.isEnd;
-  buttonPrev.disabled = swiper2.isBeginning;
+  buttonNext.disabled = swiper.isEnd;
+  buttonPrev.disabled = swiper.isBeginning;
 }
 
 function showErrorMessage() {
@@ -153,21 +153,21 @@ function keyMove(evt) {
 }
 
 function moveNext() {
-  swiper2.slideNext();
+  swiper.slideNext();
   updateButtonStates();
 }
 function movePrev() {
-  swiper2.slidePrev();
+  swiper.slidePrev();
   updateButtonStates();
 }
 
 const slides = document.querySelectorAll('.swiper-slide');
-if (swiper2.activeIndex === slides.length - 1) {
+if (swiper.activeIndex === slides.length - 1) {
   buttonNext.addEventListener('click', moveNext);
   buttonNext.disabled = true;
 }
 
-if (swiper2.activeIndex === 0) {
+if (swiper.activeIndex === 0) {
   buttonPrev.disabled = true;
 }
 
