@@ -5,18 +5,20 @@ a {
 img {
   display: block;
 }
-
+.header {
+  position: absolute;
+    top: 34px;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  width: 100%;
+}
 
 .header-section {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   justify-content: space-between;
-  position: absolute;
-    top: 34px;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
 }
 
 .home-link {
@@ -50,8 +52,8 @@ img {
   position: fixed;
   transform: translateX(100%);
   top: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: 999;
   background-image: url(../img/background-mob-menu.png);
   background-repeat: no-repeat;
@@ -85,6 +87,11 @@ img {
   visibility: visible;
 }
 
+.mob-menu-open-btn-icon {
+  fill: none;
+  stroke: #fafafa;
+}
+
 .mob-menu-close-btn {
   width: 28px;
   height: 28px;
@@ -95,7 +102,8 @@ img {
 }
 
 .mob-menu-close-btn-icon {
-  fill: #fff;
+  fill: none;
+  stroke: #fafafa;
 }
 
 .mob-menu-list {
@@ -115,6 +123,7 @@ img {
 }
 
 .mob-order-btn {
+  display: flex;
   border-radius: 60px;
   padding: 14px 31px;
   width: 164px;
@@ -125,6 +134,7 @@ img {
   font-size: 14px;
   letter-spacing: -0.02em;
   color: #fafafa;
+  align-items: center;
 }
 
 .order-btn {
@@ -145,7 +155,7 @@ img {
   }
 
   .order-btn {
-    display: block;
+    display: flex;
     border-radius: 60px;
     padding: 18px 24px;
     width: 163px;
@@ -156,6 +166,7 @@ img {
     font-size: 16px;
     letter-spacing: -0.02em;
     color: #fafafa;
+    align-items: center;
   }
 
   .header-menu {
