@@ -43,16 +43,7 @@ function keyMove(evt) {
 }
 
 
-// function moveNext() {
-//   swiper.slideNext();
-//   updateNavigationButtons();
-// }
 
-
-// function movePrev() {
-//   swiper.slidePrev();
-//   updateNavigationButtons();
-// }
 
 
 function updateNavigationButtons() {
