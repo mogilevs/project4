@@ -1,11 +1,14 @@
 import Swiper from 'swiper';
+import { Navigation } from 'swiper/modules';
+
 
 const swiper = new Swiper('.swiper', {
-  direction: 'horizontal',
+    modules: [Navigation],
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
+  direction: 'horizontal',
   mousewheel: {
     invert: true,
   },
@@ -13,6 +16,7 @@ const swiper = new Swiper('.swiper', {
     enabled: true,
     onlyInViewport: false,
   },
+ 
 });
 
 
@@ -73,6 +77,3 @@ svgPrev.classList.add('swiper-svg-disabled');
 
 
 }
-
-
-updateNavigationButtons();
