@@ -71,3 +71,4 @@ svgPrev.classList.add('swiper-svg-disabled');
 
 }
 
+updateNavigationButtons();
