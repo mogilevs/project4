@@ -1,9 +1,9 @@
 import Swiper from 'swiper';
 import { Navigation } from 'swiper/modules';
+import 'swiper/css/navigation';
 
 
-
-const swiper = new Swiper('.swiper', {
+const swiperProjects = new Swiper('.swiper', {
     modules: [Navigation],
   navigation: {
     nextEl: '.swiper-button-next',
@@ -43,16 +43,16 @@ function keyMove(evt) {
 }
 
 
-function moveNext() {
-  swiper.slideNext();
-  updateNavigationButtons();
-}
+// function moveNext() {
+//   swiper.slideNext();
+//   updateNavigationButtons();
+// }
 
 
-function movePrev() {
-  swiper.slidePrev();
-  updateNavigationButtons();
-}
+// function movePrev() {
+//   swiper.slidePrev();
+//   updateNavigationButtons();
+// }
 
 
 function updateNavigationButtons() {
