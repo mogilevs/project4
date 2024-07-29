@@ -7,19 +7,20 @@
     background-color: #ED3B44;
     border: 2px solid #f58787;
     border-radius: 50%;
-    width: 50px;
-    height: 50px;
+    width: 46px;
+    height: 46px;
     fill: #fafafa;
 }
 
 .go-top:hover {
     border: 2px solid #fafafa;
     background-color: #E0373F;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
-.go-top:focus {
+/* .go-top:focus {
      border: 2px solid #fafafa;
      background-color: #E0373F;
- }
+ } */
 .go-top--show {
     display: flex;
     justify-content: center;

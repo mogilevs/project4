@@ -11,10 +11,9 @@ function goTop() {
 window.addEventListener('scroll', trackScroll);
 
 function trackScroll() {
-  const scrolled = window.scrollY;
-  const coords = document.documentElement.clientHeight;
-  if (scrolled > coords) {
-    goTopBtn.classList.add('go-top--show');
+    const scrolled = window.scrollY;
+    if (scrolled > 100) {
+      goTopBtn.classList.add('go-top--show');
   } else {
     goTopBtn.classList.remove('go-top--show');
   }
