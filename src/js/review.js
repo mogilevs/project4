@@ -87,7 +87,7 @@ async function fetchAndDisplayReviews() {
 }
 
 
-const swiper = new Swiper('.swiper', {
+const swiperReview = new Swiper('.swiper', {
     initialSlide: 0,
     speed: 650,
     spaceBetween: 16,
@@ -121,8 +121,8 @@ const swiper = new Swiper('.swiper', {
     });
 
 function updateButtonStates() {
-    buttonNext.disabled = swiper.isEnd;
-    buttonPrev.disabled = swiper.isBeginning;
+    buttonNext.disabled = swiperReview.isEnd;
+    buttonPrev.disabled = swiperReview.isBeginning;
 }
 
 
@@ -140,36 +140,36 @@ function showErrorMessage() {
     buttonPrev.disabled = true;
 }
 
-buttonNext.addEventListener('click', moveNext); 
-buttonPrev.addEventListener('click', movePrev); 
-document.addEventListener('keydown', keyMove);
+buttonNext.addEventListener('click', goToNextSlide); 
+buttonPrev.addEventListener('click', goToPrevSlide); 
+document.addEventListener('keydown', handleKeyNavigation);
 
-function keyMove(evt) {
+function handleKeyNavigation(evt) {
   if (evt.code === 'ArrowRight') {
-    moveNext();
+    goToNextSlide();
   }
   if (evt.code === 'ArrowLeft') {
-    movePrev();
+    goToPrevSlide();
   }
 }
 
-function moveNext() {
-    swiper.slideNext();
+function goToNextSlide() {
+    swiperReview.slideNext();
     updateButtonStates();
 }
-function movePrev() {
-    swiper.slidePrev();
+function goToPrevSlide() {
+    swiperReview.slidePrev();
     updateButtonStates();
 }
 
 const slides = document.querySelectorAll('.swiper-slide'); 
-if (swiper.activeIndex === slides.length - 1) { 
+if (swiperReview.activeIndex === slides.length - 1) { 
     buttonNext.addEventListener('click', moveNext); 
 buttonNext.disabled = true;
   } 
 
 
-if (swiper.activeIndex === 0) { 
+if (swiperReview.activeIndex === 0) { 
     buttonPrev.disabled = true;
 }
 
