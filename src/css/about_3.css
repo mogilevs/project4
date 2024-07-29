@@ -1,0 +1,66 @@
+@import '../../node_modules/swiper/swiper-bundle.css';
+
+body .swiper-about {
+  padding-top: 32px;
+  padding-bottom: 64px;
+}
+
+body .swiper-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  gap: 55px;
+  transform: none;
+  list-style: none;
+}
+
+body .swiper-wrapper > .swiper-slide {
+  max-width: 130px;
+  height: 130px;
+  margin-right: 0px;
+  border-radius: 100%;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.swiper-slide:hover,
+.swiper-slide:focus {
+  background-color: #ed3b44;
+  outline: none;
+}
+
+.swiper-slide:focus-visible {
+  background-color: #ed3b44;
+  outline: 2px solid #fff;
+}
+.swiper-button-wrap {
+  width: 28px;
+  margin-left: 55px;
+  display: flex;
+  align-items: center;
+}
+
+.aboutme-swiper-btn {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: none;
+  transition: transform var(--trns);
+}
+@media screen and (max-width: 767px) {
+  body .swiper-wrapper {
+    gap: 0px;
+  }
+
+  body .swiper-slide {
+    width: calc((100% / 2 - 27.5px));
+  }
+}
