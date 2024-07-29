@@ -1,0 +1,118 @@
+.aboutme-container-swiper {
+  margin-top: 32px;
+  display: flex;
+}
+
+.aboutme-swiper-wrapper {
+  height: 130px;
+  display: flex;
+  align-items: center;
+  width: 260px;
+  margin: 0;
+  overflow: hidden;
+}
+
+.aboutme-swiper-list.swiper-wrapper {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.aboutme-swiper-item.swiper-slide {
+  max-width: 130px;
+  height: 130px;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  display: flex;
+  flex-shrink: 0;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  text-align: center;
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.aboutme-swiper-item.swiper-slide:focus,
+.aboutme-swiper-item.swiper-slide.swiper-slide-active {
+  background-color: #ed3b44;
+  outline: none;
+}
+
+.aboutme-swiper-text {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.5;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.aboutme-swiper-button-wrap {
+  width: 28px;
+  margin-left: 55px;
+  display: flex;
+  align-items: center;
+}
+
+.aboutme-swiper-btn {
+  display: block;
+  width: 28px;
+  height: 28px;
+  border: none;
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.aboutme-swiper-icon {
+  stroke: #3b3b3b;
+  width: 100%;
+  height: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .aboutme-container-swiper {
+    margin-top: 64px;
+  }
+
+  .aboutme-swiper-wrapper {
+    width: 600px;
+    height: 200px;
+  }
+
+  .aboutme-swiper-item.swiper-slide {
+    max-width: 200px;
+    min-width: 199px;
+    height: 200px;
+  }
+
+  .aboutme-swiper-item {
+    width: 200px;
+    height: 200px;
+  }
+
+  .aboutme-swiper-text {
+    font-size: 20px;
+  }
+
+  .aboutme-swiper-button-wrap {
+    width: 40px;
+    margin-left: 64px;
+  }
+
+  .aboutme-swiper-btn {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .aboutme-container-swiper {
+    margin-top: 96px;
+  }
+
+  .aboutme-swiper-wrapper {
+    width: 1232px;
+    padding-left: 32px;
+  }
+
+  .aboutme-swiper-button-wrap {
+    margin-left: 72px;
+  }
+}
