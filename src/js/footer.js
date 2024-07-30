@@ -1,7 +1,7 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
-
+//==========================================================
 const form = {
   commentsElem: document.getElementById('comments'),
   emailElem: document.getElementById('email'),
@@ -14,6 +14,7 @@ const form = {
 
 const EMAIL_PATTERN = /^\w+(\.\w+)?@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
 const API_URL = 'https://portfolio-js.b.goit.study/api/requests/';
+//=============================================================
 
 // обмеження розміру comments
 form.commentsElem.addEventListener('blur', function () {
@@ -66,6 +67,7 @@ document.addEventListener('DOMContentLoaded', function () {
     form.emailElem.value = savedEmail;
   }
 });
+//==========================================================
 
 // відкривання модального вікна
 function openModal() {
@@ -78,6 +80,7 @@ function closeModal() {
   form.backdrop.classList.remove('is-open');
   document.body.classList.remove('no-scroll');
 }
+//===========================================================
 
 // обробник подій для модал вікна
 form.modalCloseBtn.addEventListener('click', closeModal);
@@ -127,3 +130,8 @@ form.formElem.addEventListener('submit', async function (event) {
     });
   }
 });
+
+//=============================================================
+
+export { form, EMAIL_PATTERN, API_URL, openModal, closeModal };
+//=============================================================
