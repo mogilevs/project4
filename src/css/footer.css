@@ -162,12 +162,16 @@
     font-size: 13px;
     letter-spacing: -0.02em;
     color: #fafafa;
-    transition: border-color 350ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 350ms cubic-bezier(0.4, 0, 0.2, 1), 
+    
 
 }
 
-.link-info:hover{
-border: 1px solid #fafafa;
+
+
+.link-info:hover { 
+    border: 1px solid #fafafa;
+    box-shadow: 0 0 15px #ffffff80;
 }
 
 
@@ -236,22 +240,18 @@ border: 1px solid #fafafa;
     background-color: transparent;
     transition: border 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-close-btn:hover,
-.modal-close-btn:focus {
-    background-color: #3b3b3b;
-    border-radius: 50%;
-    border: 1px solid #fafafa;
-}
+
 
 .modal-close-btn:hover .modal-icon,
-.modal-close-btn:focus .modal-icon {
-    stroke: #ffffff;
-  
+.modal-close-btn:focus .modal-icon {  
+    border-radius: 50%;
+    border: 1px solid #fafafa;
+    box-shadow: 0 0 15px #ffffff80;
 }
 
 .modal-icon{
-    fill: #1c1d20;
     stroke: #fafafa;
+    
 }
 
 .titel-modal{
