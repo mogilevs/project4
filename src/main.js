@@ -20,9 +20,6 @@ import './js/aboutme_accordion.js';
 import './js/aboutme_3.js';
 import './js/scroll-up.js';
 
-
-=======
-
 //================COVERS=============================================
 observer.observe(coversSection);
 
@@ -127,4 +124,3 @@ form.formElem.addEventListener('submit', async function (event) {
     });
   }
 });
-
