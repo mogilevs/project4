@@ -1,23 +1,28 @@
-import Swiper from 'swiper';
 
-const swiper = new Swiper('.swiper', {
+import Swiper from 'swiper';
+import { Navigation, Pagination } from 'swiper/modules';
+const swiper = new Swiper('.projects-swiper', {
+ 
   direction: 'horizontal',
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-btn-next',
+    prevEl: '.swiper-btn-prev',
   },
+  initialSlide: 0,
   mousewheel: {
     invert: true,
+    
   },
   keyboard: {
     enabled: true,
     onlyInViewport: false,
   },
+  
 });
 
 
-const prevButton = document.querySelector('.swiper-button-prev');
-const nextButton = document.querySelector('.swiper-button-next');
+const prevButton = document.querySelector('.swiper-btn-prev');
+const nextButton = document.querySelector('.swiper-btn-next');
 const svgNext = document.querySelector('.turn-right');
 const svgPrev = document.querySelector('.turn-left');
 
