@@ -5,7 +5,6 @@
     cursor: pointer;
     display: none;
     background-color: #ED3B44;
-    border: 2px solid #f58787;
     border-radius: 50%;
     width: 46px;
     height: 46px;
@@ -14,14 +13,10 @@
 }
 
 .go-top:hover {
-    border: 2px solid #fafafa;
+    border: 1px solid #b62020;
     background-color: #E0373F;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
-/* .go-top:focus {
-     border: 2px solid #fafafa;
-     background-color: #E0373F;
- } */
+
 .go-top--show {
     display: flex;
     justify-content: center;
