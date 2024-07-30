@@ -6,4 +6,4 @@ import './js/covers';
 import './js/aboutme_accordion.js';
 import './js/scroll-up.js';
 import './js/footer.js';
-import './js/hero.js';
+import { heroBg } from './js/hero.js';
