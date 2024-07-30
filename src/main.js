@@ -1,13 +1,5 @@
-import {
-  addToggleAnimation,
-  coversSection,
-  observer,
-  options,
-} from './js/covers.js';
-coversSection();
-options();
-addToggleAnimation();
-observer();
+import { coversSection, observer } from './js/covers.js';
+observer.observe(coversSection);
 
 import './js/header.js';
 import './js/review.js';
