@@ -2,37 +2,54 @@ import Accordion from 'accordion-js';
 import 'accordion-js/dist/accordion.min.css';
 new Accordion('.accordion-container');
 
-const titles = document.querySelectorAll('.accordion-title');
-const contents = document.querySelectorAll('.accordion-content');
+const openAcc = document.querySelectorAll('.accordion-title');
+const contentsAcc = document.querySelectorAll('.accordion-content');
 
-titles.forEach(item =>
-  item.addEventListener('click', () => {
-    const activeContent = document.querySelector('#' + item.dataset.tab);
+openAcc.forEach(button => {
+  button.addEventListener('click', () => {
+    const upIcon = button.querySelector('.icons');
 
-    if (activeContent.classList.contains('active')) {
-      activeContent.classList.remove('active');
-      item.classList.remove('active');
+    upIcon.classList.toggle('active-up');
+  });
+});
 
-      activeContent.style.maxHeight = 0;
-    } else {
-      contents.forEach(element => {
-        element.classList.remove('active');
-        element.style.maxHeight = 0;
-      });
+// document.querySelector('[data-tab="tab-1"]').classList.remove('js-enabled');
+document.querySelector('.data-tab-one').classList.add('is-active');
+document.querySelector('.acc-1').classList.add('is-active');
+document.querySelector('.acc-1').style.maxHeight =
+  document.querySelector('.acc-1').scrollHeight + 'px';
 
-      titles.forEach(element => element.classList.remove('active'));
+// const titles = document.querySelectorAll('.accordion-title');
+// const contents = document.querySelectorAll('.accordion-content');
 
-      item.classList.add('active');
-      activeContent.classList.add('active');
-      activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
-    }
-  })
-);
+// titles.forEach(item =>
+//   item.addEventListener('click', () => {
+//     const activeContent = document.querySelector('#' + item.dataset.tab);
 
-document.querySelector('[data-tab="tab-1"]').classList.add('active');
-document.querySelector('#tab-1').classList.add('active');
-document.querySelector('#tab-1').style.maxHeight =
-  document.querySelector('#tab-1').scrollHeight + 'px';
+//     if (activeContent.classList.contains('active')) {
+//       activeContent.classList.remove('active');
+//       item.classList.remove('active');
+
+//       activeContent.style.maxHeight = 0;
+//     } else {
+//       contents.forEach(element => {
+//         element.classList.remove('active');
+//         element.style.maxHeight = 0;
+//       });
+
+//       titles.forEach(element => element.classList.remove('active'));
+
+//       item.classList.add('active');
+//       activeContent.classList.add('active');
+//       activeContent.style.maxHeight = activeContent.scrollHeight + 'px';
+//     }
+//   })
+// );
+
+// document.querySelector('[data-tab="tab-1"]').classList.add('active');
+// document.querySelector('#tab-1').classList.add('active');
+// document.querySelector('#tab-1').style.maxHeight =
+//   document.querySelector('#tab-1').scrollHeight + 'px';
 
 // function setupAccordion() {
 //   // Select all accordion headers
@@ -64,11 +81,3 @@ document.querySelector('#tab-1').style.maxHeight =
 //     });
 //   });
 // }
-
-// const accButton = document.querySelectorAll('.down-icons');
-// accButton.forEach(button => {
-//   button.addEventListener('click', () => {
-//     const upIcon = button.querySelector('.icons');
-//     upIcon.classList.add('active');
-//   });
-// });
