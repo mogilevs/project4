@@ -7,9 +7,14 @@
   height: 130px;
   display: flex;
   align-items: center;
-  width: 260px;
+  width: auto;
   margin: 0;
   overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition-property: transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  box-sizing: border-box;
 }
 
 .aboutme-swiper-list.swiper-wrapper {
@@ -20,6 +25,7 @@
 
 .aboutme-swiper-item.swiper-slide {
   max-width: 130px;
+  min-width: 130px;
   height: 130px;
   border: 1px solid rgba(250, 250, 250, 0.2);
   display: flex;
@@ -84,19 +90,25 @@
   filter: drop-shadow(0 0 8px white);
 }
 
+@media screen and (max-width: 375px) {
+  .aboutme-swiper-item.swiper-slide {
+    min-width: 130px;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .aboutme-container-swiper {
     margin-top: 64px;
   }
 
   .aboutme-swiper-wrapper {
-    width: 600px;
+    width: 100%;
     height: 200px;
   }
 
   .aboutme-swiper-item.swiper-slide {
     max-width: 200px;
-    min-width: 199px;
+    min-width: 200px;
     height: 200px;
   }
 
@@ -126,8 +138,12 @@
   }
 
   .aboutme-swiper-wrapper {
-    width: 1232px;
+    width: 100%;
     padding-left: 32px;
+  }
+  .aboutme-swiper-item.swiper-slide {
+    flex-basis: calc(100% / 6);
+    max-width: calc(100% / 6);
   }
 
   .aboutme-swiper-button-wrap {

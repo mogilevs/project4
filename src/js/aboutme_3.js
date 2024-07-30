@@ -13,6 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
       pageUpDown: true,
     },
     loop: true,
+    slidesPerView: 'auto',
+    speed: 350,
     breakpoints: {
       320: {
         slidesPerView: 2,
@@ -24,8 +26,6 @@ document.addEventListener('DOMContentLoaded', () => {
         slidesPerView: 6,
       },
     },
-    centeredSlidesBounds: true,
-    speed: 350,
   });
 
   const nextButton = document.querySelector('.aboutme-swiper-btn');
@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
     aboutmeSwiper.slideNext();
   });
 
-  aboutmeSwiper.on('SlideChange', () => {
+  aboutmeSwiper.on('slideChange', () => {
     document.querySelectorAll('.aboutme-swiper-item').forEach(slide => {
       slide.classList.remove('swiper-slide-active');
     });
