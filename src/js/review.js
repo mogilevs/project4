@@ -53,7 +53,7 @@ const toggleLoader = (show) => {
 
 function createMarkup(arr) {
     const markup = arr.map(({ _id, author, avatar_url, review }) =>
-         `<li class="swiper-slide" data-id="${_id}">
+         `<li class="swiper-slide review-swiper-slide" data-id="${_id}">
           <div class="swiper-card">
             <div class="card-image" style="background: #e0e0e0 url('${avatar_url}') no-repeat center center; background-size: cover;"></div>
             <h3 class="card-title">${author}</h3>
