@@ -3,21 +3,34 @@
   margin-bottom: 32px;
 }
 
-.accordion {
+.accordion.ac {
+  margin-top: 0;
+  background-color: transparent;
   display: flex;
   flex-direction: column;
   width: 100%;
+  border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
 }
 
-.accordion-title {
-  display: flex;
-  justify-content: space-between;
-
-  cursor: pointer;
-
+.accordion .ac-header {
   padding-bottom: 32px;
 }
+
+.accordion-content-text-li {
+  color: #fafafa;
+}
+
+.ac .accordion-title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding-bottom: 32px;
+}
+
+/* .ac .ac-panel .ac-text {
+  color: #fafafa;
+} */
 
 .accordion-title h3 {
   font-weight: 600;
@@ -28,12 +41,16 @@
   color: rgba(250, 250, 250, 0.4);
 }
 
-.acc-2,
-.acc-3 {
+.ac .acc-2,
+.ac .acc-3 {
   padding-top: 20px;
 }
 
-.down-icons {
+.accordion-content-text-li {
+  color: #fafafa;
+}
+
+.aboutme-accordion-section .ac .ac-trigger {
   display: inline-block;
   position: relative;
   border: 1px solid rgba(250, 250, 250, 0.2);
@@ -46,7 +63,11 @@
   transition: transform 0.5s ease-out;
 }
 
-.active .down-icons {
+.aboutme-accordion-section .ac .ac-trigger::after {
+  display: none;
+}
+
+.down-icons.active {
   transform: rotate(180deg);
 }
 
@@ -54,7 +75,7 @@
   padding-bottom: 12px;
 }
 
-.accordion-content {
+.aboutme-accordion-section.ac .accordion-content {
   font-weight: 500;
   font-size: 16px;
   line-height: 150%;
@@ -64,19 +85,18 @@
   max-height: 0;
   opacity: 0;
   visibility: hidden;
-
   transition: max-height 0.5s ease-out, padding 0.5s ease-out,
     opacity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
 }
 
-.accordion-content.active {
+.ac .accordion-content .active {
   visibility: visible;
   opacity: 1;
   transition: max-height 0.5s ease-out, padding 0.5s ease-out,
     opacity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
 }
 
-.accordion-content ul {
+.ac .accordion-content .ac-text {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
@@ -128,12 +148,12 @@
     gap: 16px;
   }
 
-  .acc-2,
-  .acc-3 {
+  .ac .acc-2,
+  .ac .acc-3 {
     padding-top: 32px;
   }
 
-  .down-icons {
+  .aboutme-accordion-section .ac .ac-trigger {
     padding: 10px;
     width: 40px;
     height: 40px;
