@@ -51,5 +51,8 @@
 <symbol id="icon-close-mob-menu" viewBox="0 0 32 32">
 <path d="M32 3.223l-3.223-3.223-12.777 12.777-12.777-12.777-3.223 3.223 12.777 12.777-12.777 12.777 3.223 3.223 12.777-12.777 12.777 12.777 3.223-3.223-12.777-12.777 12.777-12.777z"></path>
 </symbol>
+<symbol id="icon-aboutme-arrow" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="round" stroke-miterlimit="4" stroke-width="1.6" d="M5.334 16h21.333M18.667 8l8 8-8 8"></path>
+</symbol>
   </defs>
 </svg>
