@@ -2,7 +2,7 @@ import Swiper from 'swiper';
 import { Keyboard, Navigation } from 'swiper/modules';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const swiper = new Swiper('.aboutme-swiper-wrapper', {
+  const aboutmeSwiper = new Swiper('.aboutme-swiper-wrapper', {
     modules: [Navigation, Keyboard],
     navigation: {
       nextEl: '.aboutme-swiper-btn',
@@ -30,12 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   const nextButton = document.querySelector('.aboutme-swiper-btn');
   nextButton.addEventListener('click', () => {
-    if (window.innerWidth >= 1440) {
-      const activeSlide = swiper.slides[swiper.activeIndex];
-      activeSlide.parentNode.appendChild(activeSlide);
-      swiper.update();
-    } else {
-      swiper.slideNext();
-    }
+    aboutmeSwiper.slideNext();
+  });
+
+  aboutmeSwiper.on('SlideChange', () => {
+    document.querySelectorAll('.aboutme-swiper-item').forEach(slide => {
+      slide.classList.remove('swiper-slide-active');
+    });
+    aboutmeSwiper.slides[aboutmeSwiper.activeIndex].classList.add(
+      'swiper-slide-active'
+    );
   });
 });
