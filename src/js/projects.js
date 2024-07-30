@@ -1,16 +1,13 @@
+
 import Swiper from 'swiper';
 import { Navigation, Pagination } from 'swiper/modules';
-import 'swiper/css/navigation';
-import 'swiper/css/pagination';
-
-
-const swiperProjects = new Swiper('.swiper', {
-    modules: [Navigation, Pagination],
+const swiper = new Swiper('.projects-swiper', {
+  modules: [Navigation, Pagination],
+  direction: 'horizontal',
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  direction: 'horizontal',
   mousewheel: {
     invert: true,
   },
@@ -18,7 +15,6 @@ const swiperProjects = new Swiper('.swiper', {
     enabled: true,
     onlyInViewport: false,
   },
- 
 });
 
 
@@ -44,31 +40,41 @@ function keyMove(evt) {
 }
 
 
+function moveNext() {
+  swiper.slideNext();
+  updateNavigationButtons();
+}
 
+
+function movePrev() {
+  swiper.slidePrev();
+  updateNavigationButtons();
+}
 
 
 function updateNavigationButtons() {
-  if (swiperProjects.isEnd) {
+  if (swiper.isEnd) {
     nextButton.classList.add('swiper-button-disabled');
     svgNext.classList.add('swiper-svg-disabled');
-    swiperProjects.allowSlideNext = false;
+    swiper.allowSlideNext = false;
   } else {
     nextButton.classList.remove('swiper-button-disabled');
     svgNext.classList.remove('swiper-svg-disabled');
-    swiperProjects.allowSlideNext = true;
+    swiper.allowSlideNext = true;
   }
 
-  if (swiperProjects.isBeginning) {
+  if (swiper.isBeginning) {
     prevButton.classList.add('swiper-button-disabled');
 svgPrev.classList.add('swiper-svg-disabled');
-    swiperProjects.allowSlidePrev = false;
+    swiper.allowSlidePrev = false;
   } else {
     prevButton.classList.remove('swiper-button-disabled');
     svgPrev.classList.remove('swiper-svg-disabled');
-    swiperProjects.allowSlidePrev = true;
+    swiper.allowSlidePrev = true;
   }
 
 
 }
+
 
 updateNavigationButtons();
