@@ -2,6 +2,7 @@ import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 
+import { heroBg } from './js/hero.js';
 import { coversSection, observer } from './js/covers.js';
 import {
   form,
@@ -18,6 +19,9 @@ import './js/projects.js';
 import './js/aboutme_accordion.js';
 import './js/aboutme_3.js';
 import './js/scroll-up.js';
+
+
+=======
 
 //================COVERS=============================================
 observer.observe(coversSection);
@@ -123,3 +127,4 @@ form.formElem.addEventListener('submit', async function (event) {
     });
   }
 });
+
