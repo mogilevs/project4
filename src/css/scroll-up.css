@@ -10,6 +10,7 @@
     width: 46px;
     height: 46px;
     fill: #fafafa;
+    z-index: 998;
 }
 
 .go-top:hover {
