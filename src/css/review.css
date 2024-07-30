@@ -33,14 +33,14 @@
   height: 24px;
 }
 
-.swiper-container {
+.review-swiper-container {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin-bottom: 32px;
 }
 
-.swiper {
+.review-swiper {
   width: 100%;
   height: 100%;
 }
