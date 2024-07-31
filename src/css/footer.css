@@ -140,6 +140,7 @@
 
 .footer-btn-send:hover {
     background-color: #e0373f;
+    box-shadow: 0 0 15px #ffffff80;
 }
 
 .footer-contacts {
