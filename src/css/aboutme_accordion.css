@@ -3,7 +3,7 @@
   margin-bottom: 32px;
 }
 
-.accordion.ac {
+.accordion-container-abm .accordion {
   margin-top: 0;
   background-color: transparent;
   display: flex;
@@ -11,8 +11,15 @@
   width: 100%;
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-  padding-top: 20px;
   padding-bottom: 32px;
+}
+
+.accordion-container-abm .accordion.is-active {
+  padding-bottom: 0px;
+}
+
+.accordion-title h3.acc-1 {
+  padding-top: 0;
 }
 
 .aboutme-accordion-section .ac .ac-panel .ac-text {
@@ -26,12 +33,20 @@
 }
 
 .ac .accordion-title {
-  display: flex;
   justify-content: space-between;
   cursor: pointer;
 }
 
+.ac .ac-trigger.down-icons {
+  padding: 0;
+}
+
 .accordion-title h3 {
+  padding-top: 20px;
+}
+
+.sp-text {
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
@@ -40,21 +55,9 @@
   color: rgba(250, 250, 250, 0.4);
 }
 
-/* .ac .acc-1 {
-  padding-top: 0px;
-} ??????????????????????????????????????????????*/
-
 .aboutme-accordion-section .ac .ac-trigger {
-  display: inline-block;
-  position: relative;
-  border: 1px solid rgba(250, 250, 250, 0.2);
-  border-radius: 100px;
-  padding: 9px;
-  width: 36px;
-  height: 36px;
-  background-color: transparent;
-  transform: rotate(0);
-  transition: transform 0.5s ease-out;
+  display: flex;
+  justify-content: space-between;
 }
 
 .aboutme-accordion-section .ac .ac-trigger::after {
@@ -66,13 +69,17 @@
   transition: transform 0.5s ease-out;
 }
 
-.active-up {
-  transform: rotate(180deg);
+.sp-icons {
+  position: relative;
+  border: 1px solid rgba(250, 250, 250, 0.2);
+  border-radius: 100px;
+  padding: 9px;
+  width: 36px;
+  height: 36px;
+  background-color: transparent;
+  transform: rotate(0);
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-/* .accordion-title.active {
-  padding-bottom: 12px;
-} */
 
 .aboutme-accordion-section.ac .accordion-content {
   font-weight: 500;
@@ -80,18 +87,7 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   color: #fafafa;
-  flex: 1;
-  max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: max-height 0.5s ease-out, padding 0.5s ease-out,
-    opacity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
-}
-
-.is-active {
-  visibility: visible;
-  opacity: 1;
-  transition: max-height 0.5s ease-out, padding 0.5s ease-out,
+  transition: max-height 0.9s ease-out, padding 0.5s ease-out,
     opacity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
 }
 
@@ -117,26 +113,28 @@
   stroke: #d9d9d9;
   width: 18px;
   height: 18px;
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.down-icons:hover {
-  border-color: white;
+.sp-icons:hover {
+  border-color: #fafafa;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .icons:hover {
-  stroke: white;
+  stroke: #fafafa;
   filter: drop-shadow(0 0 8px white);
+}
+
+.active-up {
+  transform: rotate(180deg);
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (min-width: 768px) {
   .aboutme-accordion-section {
     margin-top: 64px;
     margin-bottom: 64px;
-  }
-
-  .accordion-content ul {
-    padding-bottom: 32px;
   }
 
   .aboutme-accordion-section .ac .ac-panel .ac-text {
@@ -148,11 +146,14 @@
   }
 
   .accordion.ac {
-    padding-top: 32px;
     padding-bottom: 32px;
   }
 
-  .aboutme-accordion-section .ac .ac-trigger {
+  .accordion-title h3 {
+    padding-top: 32px;
+  }
+
+  .sp-icons {
     padding: 10px;
     width: 40px;
     height: 40px;
