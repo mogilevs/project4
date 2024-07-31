@@ -1,8 +1,14 @@
 import axios from 'axios';
 import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
+import Swiper from 'swiper';
 
 import { heroBg } from './js/hero.js';
+import {
+  aboutmeSwiperConfig,
+  setupNextButton,
+  setupSlideChange,
+} from './js/aboutme_3.js';
 import { coversSection, observer } from './js/covers.js';
 import {
   form,
@@ -17,8 +23,17 @@ import './js/review.js';
 import './js/faq';
 import './js/projects.js';
 import './js/aboutme_accordion.js';
-import './js/aboutme_3.js';
 import './js/scroll-up.js';
+
+document.addEventListener('DOMContentLoaded', () => {
+  const aboutmeSwiper = new Swiper(
+    '.aboutme-swiper-wrapper',
+    aboutmeSwiperConfig
+  );
+
+  setupNextButton(aboutmeSwiper);
+  setupSlideChange(aboutmeSwiper);
+});
 
 //================COVERS=============================================
 observer.observe(coversSection);
