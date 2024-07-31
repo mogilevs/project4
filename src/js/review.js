@@ -26,6 +26,8 @@ const buttonPrev = document.querySelector('.button-prev');
 const buttonNext = document.querySelector('.button-next');
 const swiperContainer = document.querySelector('.review-slider-container');
 
+
+
 document.addEventListener('DOMContentLoaded', fetchAndDisplayReviews);
 
 const createLoader = () => {
@@ -96,6 +98,11 @@ function showErrorMessage() {
     });
     buttonNext.disabled = true;
     buttonPrev.disabled = true;
+    const swiperButtons = document.querySelectorAll('.swiper-button-lock');
+    swiperButtons.forEach(button => {
+        button.style.display = 'block';
+    });
+ 
 }
 
 function showError() {
