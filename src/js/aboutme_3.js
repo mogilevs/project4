@@ -1,4 +1,4 @@
-import { Navigation, Keyboard } from 'swiper';
+import { Navigation, Keyboard } from 'swiper/modules';
 
 export const aboutmeSwiperConfig = {
   modules: [Navigation, Keyboard],
