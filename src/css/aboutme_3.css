@@ -81,10 +81,6 @@
   transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.aboutme-swiper-btn:active {
-  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-}
-
 .aboutme-swiper-btn:active .aboutme-swiper-icon {
   stroke: white;
   filter: drop-shadow(0 0 8px white);
@@ -134,6 +130,7 @@
 
 @media screen and (min-width: 1440px) {
   .aboutme-container-swiper {
+    max-width: 1312px;
     margin-top: 96px;
   }
 
