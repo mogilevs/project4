@@ -6,7 +6,8 @@ const accordionFaq = new faqAccordion('.accordion-container-faq', {
   showMultiple: true,
 });
 
-const faqButton = document.querySelectorAll('.faq-show-text-button');
+const faqButton = document.querySelectorAll('.ac-trigger');
+
 faqButton.forEach(button => {
   button.addEventListener('click', () => {
     const arrowUpIcon = button.querySelector('.faq-icon');
