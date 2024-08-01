@@ -11,7 +11,7 @@
 
     padding-left: 0;
     padding-right: 0;
-    /* max-width: 375px; */
+    max-width: none;
     height: 508px;
     backdrop-filter: blur(30px);
     background: rgba(217, 217, 217, 0.04);
@@ -78,7 +78,7 @@ animation-name: marqueeLine;
  } 
  
  .covers-container {
-
+    max-width: 1440px;
      height: 960px;
      background-image: url('../img/covers/covers-background-tab.jpg');
    
@@ -102,7 +102,7 @@ animation-name: marqueeLine;
 
 }
 
-/* Covers-min-width: 768px */
+/* Covers-min-width: 1440px */
 
 @media screen and (min-width: 1440px) {
 .covers {
