@@ -20,7 +20,7 @@
     <script type="module" crossorigin src="/project4/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/project4/assets/vendor-a4caa47b.js">
     <link rel="stylesheet" href="/project4/assets/vendor-e9475c75.css">
-    <link rel="stylesheet" href="/project4/assets/index-a259767e.css">
+    <link rel="stylesheet" href="/project4/assets/index-aa029afd.css">
   </head>
   <body>
     <header class="header" id="header-id">
@@ -187,20 +187,24 @@
   <div class="aboutme-image"></div>
 </div>
 
-        <ul class="aboutme-accordion-section accordion-container">
+        <ul class="aboutme-accordion-section accordion-container-abm">
   <li class="accordion ac">
     <div data-tab="tab-1" class="accordion-title ac-header">
-      <h3>about me</h3>
-      <button class="down-icons ac-trigger">
-        <svg class="icons">
-          <use href="/project4/assets/icons-cb491ee8.svg#icon-arrow-down"></use>
-        </svg>
-      </button>
+      <h3 class="acc-1">
+        <button class="down-icons ac-trigger">
+          <span class="sp-text">about me</span>
+          <span class="sp-icons">
+            <svg class="icons active-up">
+              <use href="/project4/assets/icons-cb491ee8.svg#icon-arrow-down"></use>
+            </svg>
+          </span>
+        </button>
+      </h3>
     </div>
 
     <div id="tab-1" class="accordion-content ac-panel">
       <ul class="content-first ac-text">
-        <li class="accordion-content-text-li">
+        <li>
           I am Lloyd Jefferson, a talented programmer with extensive expertise
           in software development. I have an understanding of different
           programming languages and technologies, always ready to improve my
@@ -210,16 +214,20 @@
           encountered on the way.
         </li>
 
-        <li class="accordion-content-text-li">
-          Able to work both independently and in a team. I can effectively
-          cooperate with colleagues, exchanging ideas and finding optimal
-          solutions. Professional maturity allows you to calmly cope with
-          challenges and stressful situations, while maintaining a high quality
-          of work.I am always looking for opportunities for self-improvement. I
-          actively study new technologies and practices to stay abreast of the
-          latest innovations. I have a strong understanding of various
-          programming languages, frameworks and architectural concepts that
-          allow me to create efficient and scalable software.
+        <li>
+          <span class="new-p">
+            Able to work both independently and in a team. I can effectively
+            cooperate with colleagues, exchanging ideas and finding optimal
+            solutions. Professional maturity allows you to calmly cope with
+            challenges and stressful situations, while maintaining a high
+            quality of work.</span
+          >
+
+          I am always looking for opportunities for self-improvement. I actively
+          study new technologies and practices to stay abreast of the latest
+          innovations. I have a strong understanding of various programming
+          languages, frameworks and architectural concepts that allow me to
+          create efficient and scalable software.
         </li>
       </ul>
     </div>
@@ -227,43 +235,50 @@
 
   <li class="accordion ac">
     <div data-tab="tab-2" class="accordion-title acc-2 ac-header">
-      <h3>role</h3>
-      <button class="down-icons ac-trigger">
-        <svg class="icons">
-          <use href="/project4/assets/icons-cb491ee8.svg#icon-arrow-down"></use>
-        </svg>
-      </button>
+      <h3>
+        <button class="down-icons ac-trigger">
+          <span class="sp-text">role</span>
+          <span class="sp-icons">
+            <svg class="icons">
+              <use href="/project4/assets/icons-cb491ee8.svg#icon-arrow-down"></use>
+            </svg>
+          </span>
+        </button>
+      </h3>
     </div>
     <div id="tab-2" class="accordion-content ac-panel">
       <ul class="content-second ac-text">
-        <li class="accordion-content-text-li">Frontend development</li>
-        <li class="accordion-content-text-li">HeadlessCMS,Wordpress</li>
-        <li class="accordion-content-text-li">Blender(enjoy)</li>
+        <li>Frontend development</li>
+        <li>HeadlessCMS,Wordpress</li>
+        <li>Blender(enjoy)</li>
       </ul>
     </div>
   </li>
 
   <li class="accordion ac">
     <div data-tab="tab-3" class="accordion-title acc-3 ac-header">
-      <h3>education</h3>
-      <button class="down-icons ac-trigger">
-        <svg class="icons">
-          <use href="/project4/assets/icons-cb491ee8.svg#icon-arrow-down"></use>
-        </svg>
-      </button>
+      <h3>
+        <button class="down-icons ac-trigger">
+          <span class="sp-text">education</span>
+          <span class="sp-icons">
+            <svg class="icons">
+              <use href="/project4/assets/icons-cb491ee8.svg#icon-arrow-down"></use>
+            </svg>
+          </span>
+        </button>
+      </h3>
     </div>
+
     <div id="tab-3" class="accordion-content ac-panel">
       <ul class="content-next ac-text">
-        <li class="accordion-content-text-li">
+        <li>
           2018 - 2019 / Frontend Development Diploma, GoIT IT School, New York
         </li>
-        <li class="accordion-content-text-li">
+        <li>
           2019 - 2020 / Advanced Web Development Certificate, GoIT IT School,
           NewYork
         </li>
-        <li class="accordion-content-text-li">
-          2020 - 2022 / Advanced Blender Animation Techniques, Udemy
-        </li>
+        <li>2020 - 2022 / Advanced Blender Animation Techniques, Udemy</li>
       </ul>
     </div>
   </li>
