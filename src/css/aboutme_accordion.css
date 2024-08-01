@@ -131,6 +131,10 @@
   transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+.new-p {
+  padding-right: 110px;
+}
+
 @media screen and (min-width: 768px) {
   .aboutme-accordion-section {
     margin-top: 64px;
@@ -163,6 +167,10 @@
     width: 20px;
     height: 20px;
   }
+
+  .new-p {
+    padding-right: 0;
+  }
 }
 
 @media screen and (min-width: 1440px) {
@@ -191,5 +199,9 @@
 
   .content-next li:first-child {
     padding-right: 96px;
+  }
+
+  .new-p {
+    padding-right: 35px;
   }
 }
