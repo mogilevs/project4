@@ -10,10 +10,12 @@
     height: 46px;
     fill: #fafafa;
     z-index: 998;
+        transition: background-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+                box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .go-top:hover {
-    border: 1px solid #b62020;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
     background-color: #E0373F;
 }
 

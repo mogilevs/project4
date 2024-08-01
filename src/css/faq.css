@@ -36,7 +36,7 @@
   padding-left: 20px;
 }
 
-.accordion-container-faq .ac .ac-trigger:hover:focus {
+.accordion-container-faq .ac .ac-trigger:hover {
   border-color: #fafafa;
 }
 
@@ -76,7 +76,9 @@
   border-radius: 50%;
   border: 1px solid rgba(250, 250, 250, 0.5);
   background-color: transparent;
-  margin-left: 20px;  
+  margin-left: 20px;
+  transition: border-color 350ms cubic-bezier(0.4, 0, 0.2, 1),
+    box-shadow 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .arrow-up {
@@ -84,6 +86,15 @@
 }
 
 .faq-show-text-button:hover {
+  border-color: #fafafa;
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.ac-trigger:hover .faq-question-text {
+  color: rgba(250, 250, 250, 0.8);
+}
+
+.ac-trigger:hover .faq-show-text-button {
   border-color: #fafafa;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
@@ -120,9 +131,9 @@
   .accordion-container-faq > .ac .ac-trigger::after {
     padding-left: 20px;
   }
-.accordion-container-faq .ac:last-child .ac-trigger {
+  .accordion-container-faq .ac:last-child .ac-trigger {
     padding-right: 220px;
-}
+  }
   .faq-show-text-button {
     width: 40px;
     height: 40px;
@@ -164,14 +175,14 @@
     padding-right: 62px;
   }
 
-   .accordion-container-faq .ac:last-child .ac-trigger {
-       padding-right: 181px;
-   }
+  .accordion-container-faq .ac:last-child .ac-trigger {
+    padding-right: 181px;
+  }
 
- .faq-hide-text {
-     margin: 0;
-     max-width: 656px;
- }
+  .faq-hide-text {
+    margin: 0;
+    max-width: 656px;
+  }
 
   .faq-list-item:nth-child(odd)::after {
     content: '';
