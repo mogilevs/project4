@@ -85,7 +85,6 @@
 .aboutme-swiper-icon:hover {
   stroke: white;
   filter: drop-shadow(0 0 8px white);
-  transform: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 @media screen and (max-width: 375px) {
