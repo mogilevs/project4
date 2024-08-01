@@ -3,7 +3,7 @@
   margin-bottom: 32px;
 }
 
-.accordion.ac {
+.accordion-container-abm .accordion {
   margin-top: 0;
   background-color: transparent;
   display: flex;
@@ -11,28 +11,42 @@
   width: 100%;
   border: none;
   border-bottom: 1px solid rgba(250, 250, 250, 0.2);
-}
-
-.accordion .ac-header {
   padding-bottom: 32px;
 }
 
-.accordion-content-text-li {
+.accordion-container-abm .accordion.is-active {
+  padding-bottom: 0px;
+}
+
+.accordion-title h3.acc-1 {
+  padding-top: 0;
+}
+
+.aboutme-accordion-section .ac .ac-panel .ac-text {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: -0.02em;
   color: #fafafa;
+  padding: 12px 0px 20px 0;
 }
 
 .ac .accordion-title {
-  display: flex;
   justify-content: space-between;
   cursor: pointer;
-  padding-bottom: 32px;
 }
 
-/* .ac .ac-panel .ac-text {
-  color: #fafafa;
-} */
+.ac .ac-trigger.down-icons {
+  padding: 0;
+}
 
 .accordion-title h3 {
+  padding-top: 20px;
+}
+
+.sp-text {
+  font-family: 'Inter Tight', sans-serif;
   font-weight: 600;
   font-size: 16px;
   line-height: 150%;
@@ -41,17 +55,21 @@
   color: rgba(250, 250, 250, 0.4);
 }
 
-.ac .acc-2,
-.ac .acc-3 {
-  padding-top: 20px;
-}
-
-.accordion-content-text-li {
-  color: #fafafa;
-}
-
 .aboutme-accordion-section .ac .ac-trigger {
-  display: inline-block;
+  display: flex;
+  justify-content: space-between;
+}
+
+.aboutme-accordion-section .ac .ac-trigger::after {
+  display: none;
+}
+
+.icons {
+  transform: rotate(0);
+  transition: transform 0.5s ease-out;
+}
+
+.sp-icons {
   position: relative;
   border: 1px solid rgba(250, 250, 250, 0.2);
   border-radius: 100px;
@@ -60,19 +78,7 @@
   height: 36px;
   background-color: transparent;
   transform: rotate(0);
-  transition: transform 0.5s ease-out;
-}
-
-.aboutme-accordion-section .ac .ac-trigger::after {
-  display: none;
-}
-
-.down-icons.active {
-  transform: rotate(180deg);
-}
-
-.accordion-title.active {
-  padding-bottom: 12px;
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .aboutme-accordion-section.ac .accordion-content {
@@ -81,18 +87,7 @@
   line-height: 150%;
   letter-spacing: -0.02em;
   color: #fafafa;
-  flex: 1;
-  max-height: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: max-height 0.5s ease-out, padding 0.5s ease-out,
-    opacity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
-}
-
-.ac .accordion-content .active {
-  visibility: visible;
-  opacity: 1;
-  transition: max-height 0.5s ease-out, padding 0.5s ease-out,
+  transition: max-height 0.9s ease-out, padding 0.5s ease-out,
     opacity 0.1s ease-out, visibility 0.1s ease-out 0.5s;
 }
 
@@ -118,16 +113,26 @@
   stroke: #d9d9d9;
   width: 18px;
   height: 18px;
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.down-icons:hover {
-  border-color: white;
+.sp-icons:hover {
+  border-color: #fafafa;
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
 }
 
 .icons:hover {
-  stroke: white;
+  stroke: #fafafa;
   filter: drop-shadow(0 0 8px white);
+}
+
+.active-up {
+  transform: rotate(180deg);
+  transition: transform 350ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.new-p {
+  padding-right: 110px;
 }
 
 @media screen and (min-width: 768px) {
@@ -136,24 +141,23 @@
     margin-bottom: 64px;
   }
 
-  .accordion-content ul {
-    padding-bottom: 32px;
-  }
-
-  .accordion-title.active {
-    padding-bottom: 8px;
+  .aboutme-accordion-section .ac .ac-panel .ac-text {
+    padding: 8px 0px 32px 0px;
   }
 
   .content-first {
     gap: 16px;
   }
 
-  .ac .acc-2,
-  .ac .acc-3 {
+  .accordion.ac {
+    padding-bottom: 32px;
+  }
+
+  .accordion-title h3 {
     padding-top: 32px;
   }
 
-  .aboutme-accordion-section .ac .ac-trigger {
+  .sp-icons {
     padding: 10px;
     width: 40px;
     height: 40px;
@@ -163,12 +167,21 @@
     width: 20px;
     height: 20px;
   }
+
+  .new-p {
+    padding-right: 0;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .aboutme-accordion-section {
     margin-top: 96px;
     margin-bottom: 96px;
+  }
+
+  .aboutme-accordion-section .ac .ac-panel .ac-text {
+    margin-right: 68px;
+    margin-left: 696px;
   }
 
   .accordion-content ul {
@@ -186,5 +199,9 @@
 
   .content-next li:first-child {
     padding-right: 96px;
+  }
+
+  .new-p {
+    padding-right: 35px;
   }
 }
