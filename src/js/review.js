@@ -24,7 +24,7 @@ class ReviewAPI {
 const reviewsList = document.querySelector('.js-reviews-list');
 const buttonPrev = document.querySelector('.button-prev');
 const buttonNext = document.querySelector('.button-next');
-const swiperContainer = document.querySelector('.review-slider-container');
+const swiperContainer = document.querySelector('.review-swiper-container');
 
 
 
@@ -39,6 +39,13 @@ const createLoader = () => {
 
     loaderContainer.appendChild(loader);
     swiperContainer.appendChild(loaderContainer);
+
+    buttonNext.disabled = true;
+    buttonPrev.disabled = true;
+    const swiperButtons = document.querySelectorAll('.swiper-button-lock');
+    swiperButtons.forEach(button => {
+        button.style.display = 'block';
+    });
 
     return loaderContainer;
 };
