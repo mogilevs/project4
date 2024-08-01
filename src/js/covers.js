@@ -1,11 +1,11 @@
 export const coversSection = document.querySelector('.covers');
 
-export const options = {
+const options = {
   rootMargin: '0px',
   threshold: 0,
 };
 
-export function addToggleAnimation(entries) {
+function addToggleAnimation(entries) {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
       coversSection.classList.add('animate');
@@ -16,5 +16,3 @@ export function addToggleAnimation(entries) {
 }
 
 export const observer = new IntersectionObserver(addToggleAnimation, options);
-
-observer.observe(coversSection);
