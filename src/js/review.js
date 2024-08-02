@@ -28,7 +28,7 @@ const swiperContainer = document.querySelector('.review-swiper-container');
 
 
 
-// document.addEventListener('DOMContentLoaded', fetchAndDisplayReviews);
+
 
 const createLoader = () => {
     const loaderContainer = document.createElement('div');
