@@ -3,6 +3,21 @@ import iziToast from 'izitoast';
 import 'izitoast/dist/css/iziToast.min.css';
 import Swiper from 'swiper';
 
+import {
+  mobMenuOpen,
+  mobMenu,
+  mobMenuClose,
+  dropMenu,
+  dropMenuBtn,
+  mobMenuLink,
+  orderLink,
+  orderLinkMob,
+  openMobMenu,
+  closeMobMenu,
+  openDropMenu,
+  closeDropMenuECS,
+  handlerScroll,
+} from './js/header.js';
 import { heroBg } from './js/hero.js';
 import {
   aboutmeSwiperConfig,
@@ -21,11 +36,30 @@ import {
   closeModal,
 } from './js/footer.js';
 
-import './js/header.js';
 import './js/faq';
 import './js/projects.js';
 import './js/aboutme_accordion.js';
 import './js/scroll-up.js';
+
+//================HEADER=============================================
+
+mobMenuOpen.addEventListener('click', openMobMenu);
+mobMenuClose.addEventListener('click', closeMobMenu);
+dropMenuBtn.addEventListener('click', openDropMenu);
+dropMenu.addEventListener('click', handlerScroll);
+mobMenuLink.addEventListener('click', handlerScroll);
+window.addEventListener('keydown', closeDropMenuECS);
+orderLink.addEventListener('click', handlerScroll);
+orderLinkMob.addEventListener('click', handlerScroll);
+
+window.onclick = function (evt) {
+  if (
+    !evt.target.matches('.header-menu') &&
+    !evt.target.matches('.drop-menu-nav')
+  ) {
+    dropMenu.classList.remove('drop-menu-show');
+  }
+};
 
 document.addEventListener('DOMContentLoaded', () => {
   const aboutmeSwiper = new Swiper(

@@ -7,15 +7,6 @@ const mobMenuLink = document.querySelector('.mob-menu-nav');
 const orderLink = document.querySelector('.order-btn');
 const orderLinkMob = document.querySelector('.mob-order-btn');
 
-mobMenuOpen.addEventListener('click', openMobMenu);
-mobMenuClose.addEventListener('click', closeMobMenu);
-dropMenuBtn.addEventListener('click', openDropMenu);
-dropMenu.addEventListener('click', handlerScroll);
-mobMenuLink.addEventListener('click', handlerScroll);
-window.addEventListener('keydown', closeDropMenuECS);
-orderLink.addEventListener('click', handlerScroll);
-orderLinkMob.addEventListener('click', handlerScroll);
-
 function openMobMenu() {
   mobMenu.classList.add('is-open');
 }
@@ -32,15 +23,6 @@ function openDropMenu() {
   }
 }
 
-window.onclick = function (evt) {
-  if (
-    !evt.target.matches('.header-menu') &&
-    !evt.target.matches('.drop-menu-nav')
-  ) {
-    dropMenu.classList.remove('drop-menu-show');
-  }
-};
-
 function closeDropMenuECS(evt) {
   if (evt.key === 'Escape') {
     dropMenu.classList.remove('drop-menu-show');
@@ -53,8 +35,7 @@ function handlerScroll(evt) {
     mobMenu.classList.remove('is-open');
   }
   const target = evt.target.getAttribute('href').substring(1);
-    const targetSection = document.getElementById(target);
-    
+  const targetSection = document.getElementById(target);
 
   window.scrollTo({
     top: targetSection.offsetTop,
