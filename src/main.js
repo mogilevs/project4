@@ -10,6 +10,9 @@ import {
   setupSlideChange,
 } from './js/aboutme_3.js';
 import { coversSection, observer } from './js/covers.js';
+
+import { fetchAndDisplayReviews } from './js/review.js';
+
 import {
   form,
   EMAIL_PATTERN,
@@ -19,7 +22,6 @@ import {
 } from './js/footer.js';
 
 import './js/header.js';
-import './js/review.js';
 import './js/faq';
 import './js/projects.js';
 import './js/aboutme_accordion.js';
@@ -37,6 +39,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 //================COVERS=============================================
 observer.observe(coversSection);
+
+//================REVIEWS=============================================
+
+document.addEventListener('DOMContentLoaded', fetchAndDisplayReviews);
 
 //================FOOTER=============================================
 
