@@ -14,6 +14,7 @@
 
 .button-next .arrow-icon,
 .button-prev .arrow-icon {
+  fill: none;
   stroke-width: 2px;
   stroke: #fafafa;
   width: 24px;

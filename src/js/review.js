@@ -10,7 +10,7 @@ import "izitoast/dist/css/iziToast.min.css";
 
 axios.defaults.baseURL = 'https://portfolio-js.b.goit.study/api';
 
-class ReviewAPI {
+export class ReviewAPI {
     async getReviews() {
         try {
             const res = await axios.get('/reviews');
@@ -28,7 +28,7 @@ const swiperContainer = document.querySelector('.review-swiper-container');
 
 
 
-document.addEventListener('DOMContentLoaded', fetchAndDisplayReviews);
+// document.addEventListener('DOMContentLoaded', fetchAndDisplayReviews);
 
 const createLoader = () => {
     const loaderContainer = document.createElement('div');
@@ -52,7 +52,7 @@ const createLoader = () => {
 
 const loaderContainer = createLoader();
 
-const toggleLoader = (show) => {
+export const toggleLoader = (show) => {
   if (show) {
     loaderContainer.classList.remove('hidden');
   } else {
@@ -60,7 +60,7 @@ const toggleLoader = (show) => {
   }
 };
 
-function createMarkup(arr) {
+export function createMarkup(arr) {
     const markup = arr.map(({ _id, author, avatar_url, review }) =>
          `<li class="swiper-slide review-swiper-slide" data-id="${_id}">
           <div class="swiper-card">
@@ -73,27 +73,8 @@ function createMarkup(arr) {
     return reviewsList.insertAdjacentHTML("beforeend", markup);
 }
 
-async function fetchAndDisplayReviews() {
-    const reviewAPI = new ReviewAPI();
-    toggleLoader(true);
-    try {
-        const data = await reviewAPI.getReviews();
-        if (data && data.length > 0) {
-            createMarkup(data);
-            toggleLoader(false); 
-        } else {
-            toggleLoader(false);
-            showErrorMessage();
-            showError();
-        }
-    } catch (error) {
-        toggleLoader(false);
-        showErrorMessage();
-        showError();
-    }
-}
 
-function showErrorMessage() {
+export function showErrorMessage() {
     reviewsList.innerHTML = '<div class="err-container"></div>';
     const errorAnimationContainer = document.querySelector('.err-container');
        lottie.loadAnimation({
@@ -112,7 +93,7 @@ function showErrorMessage() {
  
 }
 
-function showError() {
+export function showError() {
     return iziToast.error({
         icon: false,
         message: 'Failed to load data. Please try again later!',

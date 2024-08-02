@@ -19,7 +19,7 @@ import {
 } from './js/footer.js';
 
 import './js/header.js';
-import './js/review.js';
+
 import './js/faq';
 import './js/projects.js';
 import './js/aboutme_accordion.js';
@@ -139,3 +139,29 @@ form.formElem.addEventListener('submit', async function (event) {
     });
   }
 });
+
+
+import {
+  ReviewAPI, toggleLoader, createMarkup, showErrorMessage, showError} from './js/review.js';
+
+document.addEventListener('DOMContentLoaded', fetchAndDisplayReviews);
+ 
+async function fetchAndDisplayReviews() {
+    const reviewAPI = new ReviewAPI();
+    toggleLoader(true);
+    try {
+        const data = await reviewAPI.getReviews();
+        if (data && data.length > 0) {
+            createMarkup(data);
+            toggleLoader(false); 
+        } else {
+            toggleLoader(false);
+            showErrorMessage();
+            showError();
+        }
+    } catch (error) {
+        toggleLoader(false);
+        showErrorMessage();
+        showError();
+    }
+}
