@@ -15,3 +15,5 @@ const activeContent = document.getElementById('ac-6');
 activeContent.classList.add('is-active');
 const activeText = document.getElementById('tab-1');
 activeText.style.height = 'auto';
+
+export { openAcc, activeContent, activeText };
